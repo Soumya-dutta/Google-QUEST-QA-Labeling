@@ -39,7 +39,7 @@ This problem was approached in several steps. First, a **Universal Sentence Enco
 The problem was then approached by employing **BERT**. The **Huggingface Transformer** implementation was used for **Tensorflow**. Several methods were used in this respect:
 
 - Train BERT models for question and answers separately to predict 21 and 9 features respectively by taking the top layer of BERT only
-- Train BERT models for question and asnwers separately but concatenating them for predicting 30 features by using the top layer of BERT 
+- Train BERT models for question and answers separately but concatenating them for predicting 30 features by using the top layer of BERT 
 - Train BERT models for question and answer separately but concatenating them for predicting 30 features and using a LSTM/GRU after concatenating the last 4 layers
 
 Based on the validation results, and also keeping in mind the compute power available in Google Colab, models were saved from the 2nd and 3rd methods. The final result was used after taking an average ensemble of the models created by these two methods. 
